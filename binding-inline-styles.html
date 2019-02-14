@@ -1,0 +1,28 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+	<div :style="{color:'red', fontSize: fontSize + 'px'}">{{ message }}</div>
+	<div :style="styleObject">{{message}}</div>
+    <!-- fontsize in js translates to font-size in css -->
+    <div :style="[styleObject,styleObject2]">{{message}}</div> <!-- style object2 overrides style object -->
+</div>
+<script>
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			message: 'Hello',
+			fontSize: 30,
+			styleObject: {
+				color: 'green',
+				fontSize: '20px'
+
+			},
+			styleObject2: {
+				color: 'yellow',
+				fontSize: '100px'
+
+			}
+		}
+	})
+</script>
+</html>
