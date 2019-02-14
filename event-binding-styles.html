@@ -1,0 +1,27 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+	<button @click="increaseFont">Increase</button>
+	<button></button>
+	<div :style="{color:'red', fontSize: fontSize + 'px'}">{{ message }}</div>
+    <!-- fontsize in js translates to font-size in css -->
+</div>
+<script>
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			message: 'Hello',
+			fontSize: 30
+		},
+		methods: {
+			// increaseFont: function(){
+			// 	console.log("Hi");
+			// } will work; below will also work
+
+			increaseFont() {
+				this.fontSize++;
+			}
+		}
+	})
+</script>
+</html>
