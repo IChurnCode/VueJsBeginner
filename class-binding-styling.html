@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style>
+	.active{
+		color: green;
+	}
+	.notActive{
+		color: red;
+	}
+</style>
+</head>
+<body>
+<div id="app">
+	<h2 class="active">{{ message }}</h2>
+	<h2 class="static" :class="{active: isActive, notActive: !isActive}">{{ message }}</h2>
+	<h2 :class="[isActive? 'active' : 'notActive']">{{ message }}</h2>
+	<!-- v-binding of class property leaves the normla class property as is... so this will be static notActive -->
+</div>
+<script>
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			message: 'Hello',
+			isActive: false
+		}
+	})
+</script>
+</body>
+</html> 
