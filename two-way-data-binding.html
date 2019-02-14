@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class ="container">
+<div id="app">
+	<form action="">
+		<div class="col-sm-6">
+			<input type="text" v-model="message" class="form-control">
+
+		</div>
+	</form>
+	{{message}}
+</div>
+</div>
+
+<script>
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			message: ""
+		}
+	})
+</script>
+</body>
+</html>
