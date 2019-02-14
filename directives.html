@@ -1,0 +1,23 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+	<a v-bind:href="url">{{url}}</a>
+	<h1 v-on:click="number++">{{number}}</h1>
+	<h1 @click="number--">Decrease</h1> <!-- @click same as v-on:click -->
+	<form action="" @submit.prevent="number++"> <!-- prevents refreshing of the page each time and isntead increases the number -->
+		<button type="submit">SUBMIT</button>
+	</form>
+
+</div>
+</div>
+
+<script>
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			number: 10,
+			url: 'https://medium.com/@iswarya'
+		}
+	})
+</script>
+</html>
