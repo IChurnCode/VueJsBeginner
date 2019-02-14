@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class ="container">
+<div id="app">
+	<form action="">
+		<div class="col-sm-6">
+			<input type="text" v-model="options">
+			<input type="checkbox" v-model="options" value="option1">option1
+			<input type="checkbox" v-model="options" value="option2">option2
+			<input type="checkbox" v-model="options" value="option3">option3
+
+		</div>
+	</form>
+	you selected {{options.join(', ')}}
+</div>
+</div>
+
+<script>
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			options: [],
+			message: ""
+		}
+	})
+</script>
+</body>
+</html>
