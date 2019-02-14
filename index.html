@@ -1,11 +1,17 @@
 <html>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<div id="app">{{ message }}</div>
+<div id="app">
+	<h2>{{ message.split('').reverse('').join('') }}</h2>
+	<h2>{{ number }}</h2>
+	<h2>{{ isActive ? "is active" : "not active" }}</h2>
+</div>
 <script>
-	new Vue({
+	let vm = new Vue({
 		el: '#app',
 		data: {
-			message: 'Hello'
+			message: 'Hello',
+			number: 10,
+			isActive: true
 		}
 	})
 </script>
