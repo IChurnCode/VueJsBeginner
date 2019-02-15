@@ -1,0 +1,17 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+	<posts></posts>
+</div>
+<script>
+	Vue.component('posts',{
+		template: '<h1>Hello from component</h1>'
+	});
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			message: 'Hello'
+		}
+	})
+</script>
+</html>
