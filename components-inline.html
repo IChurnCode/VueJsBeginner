@@ -1,0 +1,28 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+	<posts inline-template><h1 @click="display">Helllo from inlie template</h1></posts>
+	<!-- <posts><posts> -->
+</div>
+<script>
+	Vue.component('posts',{
+		data() {
+			return {
+
+			}
+		},
+
+		methods: {
+			display() {
+				console.log("hello");
+			}
+		}
+	});
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			message: 'Hello'
+		}
+	})
+</script>
+</html>
