@@ -1,0 +1,31 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+	<posts :id="34"></posts>
+	<!-- <posts><posts> -->
+</div>
+<script>
+	Vue.component('posts',{
+		props: ['id'],
+		template: '<h1 @click="display">{{ id }}</h1>',
+		data() {
+			return {
+				message: 'Hello world!!'
+
+			}
+		},
+
+		methods: {
+			display() {
+				console.log("hello");
+			}
+		}
+	});
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			message: 'Hello'
+		}
+	})
+</script>
+</html>
